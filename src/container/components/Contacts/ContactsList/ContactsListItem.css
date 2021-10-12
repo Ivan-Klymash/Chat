@@ -5,6 +5,7 @@
 .chat-header {
     padding: 15px 10px;
     border-bottom: 1px solid lightgray;
+    background-color: rgba(219, 219, 219, 0.4);
 }
 .contact-img {
     width: 40px;
@@ -14,7 +15,7 @@
 }
 .form-box {
     border: 1px solid lightgray;
-    border-radius: 25px;
+    border-radius: 15px;
     padding: 4px;
     display: flex;
     align-items: center;
@@ -75,10 +76,52 @@
 
 .right-part {
     width: 62%;
+    position: relative;
+    top: 0px;
+    background-color: inherit;
+}
+
+/* Message */
+.form-box-message{
+    background-color: grey;
+    margin-left: 10px;
+    color: white;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 14px;
+}
+
+.send-box {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+}
+.send-message {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+.send-icons {
+    background-image: url(../../../../assets/background-images/outline_send_black_18dp.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: inherit;
+    margin-right: 4px;
+    margin-top: 2px;
 }
 
 @media screen and (max-width: 426px) {
-    .left-part {
+    .left-part{
+        display: none;
+    }
+    .right-part {
         width: 100%;
     }
 

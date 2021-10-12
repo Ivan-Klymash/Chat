@@ -43,10 +43,22 @@ const Message = () => {
             return [...value, newMessage]
         })
     }
+    // запит на сервер
+    // sendMessage = (e) => {
+    //     e.preventDefault()
+    //     axios
+    // }
 
     return (
         <>
-            <div style={{ display: 'flex' }}>
+            <div
+                style={{
+                    display: 'flex',
+                    borderBottom: '1px solid lightgray',
+                    padding: '10px 10px 0px 10px',
+                    backgroundColor: 'rgba(219, 219, 219, 0.4)',
+                }}
+            >
                 <img className="contact-img" src="/images/Josefina.jpg" />
                 <FontAwesomeIcon
                     icon={faCheckCircle}
@@ -56,40 +68,72 @@ const Message = () => {
                         marginTop: '30px',
                     }}
                 />
-                <h4>Josefina</h4>
+                <h4 style={{ marginLeft: '10px', fontSize: '16px' }}>
+                    Josefina
+                </h4>
             </div>
-            <hr />
-
-            {message.map(({ image, text, data, time }, i) => (
-                <div key={i}>
-                    <article style={{ display: 'flex' }}>
-                        <div>{image}</div>
-                        <p
+            <div
+                style={{
+                    position: 'absolute',
+                    height: '78%',
+                    overflowY: 'scroll',
+                    backgroundColor: 'floralwhite',
+                    width: '100%',
+                }}
+            >
+                {message.map(({ image, text, data, time }, i) => (
+                    <div
+                        key={i}
+                        style={{
+                            // backgroundColor: 'floralwhite',
+                            padding: '10px',
+                        }}
+                    >
+                        <article
+                            style={{ display: 'flex', alignItems: 'center' }}
+                        >
+                            <div>{image}</div>
+                            <p className="form-box form-box-message">{text}</p>
+                        </article>
+                        <span
                             style={{
-                                backgroundColor: 'grey',
-                                marginLeft: 10,
+                                fontSize: 10,
+                                marginLeft: '13%',
                             }}
                         >
-                            {text}
-                        </p>
-                    </article>
-                    <span style={{ fontSize: 10 }}>{data}</span>
-                    <span style={{ fontSize: 10, marginLeft: 10 }}>{time}</span>
-                </div>
-            ))}
-
-            <form className="form-box" onSubmit={onSend}>
-                <input
-                    className="chat-search"
-                    value={newMessage.text}
-                    onChange={handleTextChange}
-                    type="text"
-                    placeholder="Type your message"
-                />
-                <button type="submit" value="Send">
-                    Відпр.
-                </button>
-            </form>
+                            {data}
+                        </span>
+                        <span style={{ fontSize: 10, marginLeft: 10 }}>
+                            {time}
+                        </span>
+                    </div>
+                ))}
+            </div>
+            <div
+                style={{
+                    width: '100%',
+                    backgroundColor: 'rgba(219, 219, 219, 0.4)',
+                    padding: '30px 3% 0px',
+                    position: 'absolute',
+                    top: '89.5%',
+                    borderTop: '1px solid lightgray',
+                }}
+            >
+                <form className="send-box" onSubmit={onSend}>
+                    <input
+                        className="send-message"
+                        value={newMessage.text}
+                        onChange={handleTextChange}
+                        type="text"
+                        placeholder="Type your message"
+                    />
+                    <button
+                        className="send-icons"
+                        type="submit"
+                        value="Send"
+                    ></button>
+                </form>
+            </div>
         </>
     )
 }

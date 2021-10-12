@@ -63,10 +63,9 @@ const ContactsList = () => {
                         )
                     )}
                 </div>
-                <section className="right-part">
-                    <div>на onClick виводити конкретний діалог</div>
+                <div className="right-part">
                     <Message />
-                </section>
+                </div>
             </div>
         </>
     )
