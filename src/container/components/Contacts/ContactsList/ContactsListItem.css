@@ -1,0 +1,85 @@
+.left-part{
+    border-right: 1px solid lightgray;
+    width: 38%;
+}
+.chat-header {
+    padding: 15px 10px;
+    border-bottom: 1px solid lightgray;
+}
+.contact-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.form-box {
+    border: 1px solid lightgray;
+    border-radius: 25px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.chat-search {
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: inherit;
+    display: inline-block;
+    font-size: 14px;
+}
+/* забрати з поля пошуку хрестик(очистити) */
+  input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+  }
+  .chats-title {
+    padding: 30px 10px 40px;
+    color: blue;
+    font-size: 16px;
+    background-color: white;
+    margin: 0;
+}
+
+/* ContactsListItem */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+.contact-item-btn {
+    padding: 0 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+    background-color: white;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 0px;
+}
+.contact-item-name {
+    padding-left: 15px;
+    font-weight: 600;
+    text-align: start;
+}
+.contact-item-data {
+    font-size: 10px;
+    flex-grow: 1;
+    text-align: end;
+    align-self: flex-start;
+}
+
+.right-part {
+    width: 62%;
+}
+
+@media screen and (max-width: 426px) {
+    .left-part {
+        width: 100%;
+    }
+
+}
