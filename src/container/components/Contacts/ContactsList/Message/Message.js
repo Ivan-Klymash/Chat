@@ -43,49 +43,24 @@ const Message = () => {
             return [...value, newMessage]
         })
     }
-    // запит на сервер
-    // sendMessage = (e) => {
-    //     e.preventDefault()
-    //     axios
-    // }
 
     return (
         <>
-            <div
-                style={{
-                    display: 'flex',
-                    borderBottom: '1px solid lightgray',
-                    padding: '10px 10px 0px 10px',
-                    backgroundColor: 'rgba(219, 219, 219, 0.4)',
-                }}
-            >
+            <div className="active-message-user">
                 <img className="contact-img" src="/images/Josefina.jpg" />
                 <FontAwesomeIcon
                     icon={faCheckCircle}
-                    style={{
-                        color: 'green',
-                        marginLeft: '-10px',
-                        marginTop: '30px',
-                    }}
+                    className="active-message-icon"
                 />
                 <h4 style={{ marginLeft: '10px', fontSize: '16px' }}>
                     Josefina
                 </h4>
             </div>
-            <div
-                style={{
-                    position: 'absolute',
-                    height: '78%',
-                    overflowY: 'scroll',
-                    backgroundColor: 'floralwhite',
-                    width: '100%',
-                }}
-            >
+            <div className="active-message">
                 {message.map(({ image, text, data, time }, i) => (
                     <div
                         key={i}
                         style={{
-                            // backgroundColor: 'floralwhite',
                             padding: '10px',
                         }}
                     >
@@ -109,16 +84,7 @@ const Message = () => {
                     </div>
                 ))}
             </div>
-            <div
-                style={{
-                    width: '100%',
-                    backgroundColor: 'rgba(219, 219, 219, 0.4)',
-                    padding: '30px 3% 0px',
-                    position: 'absolute',
-                    top: '89.5%',
-                    borderTop: '1px solid lightgray',
-                }}
-            >
+            <div className="send-message-area">
                 <form className="send-box" onSubmit={onSend}>
                     <input
                         className="send-message"

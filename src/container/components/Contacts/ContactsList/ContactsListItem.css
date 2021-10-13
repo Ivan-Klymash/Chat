@@ -82,6 +82,24 @@
 }
 
 /* Message */
+.active-message-user {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    padding: 10px 10px 0px 10px;
+    background-color: rgba(219, 219, 219, 0.4);
+}
+.active-message-icon {
+    color: green;
+    margin-left: -10px;
+    margin-top: 30px;
+}
+.active-message{
+    position: absolute;
+    height: 78%;
+    overflow-y: scroll;
+    background-color: floralwhite;
+    width: 100%;
+}
 .form-box-message{
     background-color: grey;
     margin-left: 10px;
@@ -90,7 +108,14 @@
     margin-top: 0px;
     font-size: 14px;
 }
-
+.send-message-area {
+    width: 100%;
+    background-color: rgba(219, 219, 219, 0.4);
+    padding: 30px 3% 0px;
+    position: absolute;
+    top: 89.5%;
+    border-top: 1px solid lightgray;
+}
 .send-box {
     border: 1px solid lightgray;
     border-radius: 10px;
@@ -117,12 +142,12 @@
     margin-top: 2px;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 581px) {
     .left-part{
         display: none;
     }
     .right-part {
         width: 100%;
+        position: static;
     }
-
 }
