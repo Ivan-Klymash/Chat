@@ -8,19 +8,20 @@ const Message = () => {
         {
             image: <img className="contact-img" src="/images/Josefina.jpg" />,
             text: 'Quickly come to the meeting room 1B, we have a big server issue',
-            data: '09/19/21',
-            time: '4:00 AM',
+            data: '06/25/22',
+            time: '14:00 AM',
         },
         {
+            image: <img className="contact-img" src="/images/own-photo.jpg" />,
             text: "I'm having breakfast right now, cant you wait for 10 minutes?",
-            data: '09/19/21',
-            time: '4:05 AM',
+            data: '06/25/22',
+            time: '14:05 AM',
         },
         {
             image: <img className="contact-img" src="/images/Josefina.jpg" />,
             text: 'We are losing money! Quick',
-            data: '09/19/21',
-            time: '4:07 AM',
+            data: '06/25/22',
+            time: '14:06 AM',
         },
     ]
 

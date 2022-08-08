@@ -5,7 +5,7 @@ const contactsArray = [
         image: '/images/Alice Freeman.jpg',
         text: 'Your are the worst!',
         time: '15:35 AM',
-        data: 'Oct. 10, 2021',
+        data: 'June 09, 2022',
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const contactsArray = [
         image: '/images/Josefina.jpg',
         text: 'We are losing money! Quick!',
         time: '10:16 AM',
-        data: 'Sep. 19, 2021',
+        data: 'June 25, 2022',
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ const contactsArray = [
         image: '/images/Velazquez.jpg',
         text: 'Quickly come to the meeting room 1B, we have a big server issue',
         time: '09:52 AM',
-        data: 'Sep. 19, 2021',
+        data: 'July 11, 2022',
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ const contactsArray = [
         image: '/images/Barrera.jpg',
         text: 'Can you help me with this problem? ',
         time: '16:05 AM',
-        data: 'Sep. 11, 2021',
+        data: 'July 19, 2022',
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ const contactsArray = [
         image: '/images/John.jpg',
         text: 'We need to finish this today!',
         time: '17:00 AM',
-        data: 'Oct. 09, 2021',
+        data: 'Aug. 01, 2022',
     },
     {
         id: 6,
@@ -45,7 +45,7 @@ const contactsArray = [
         image: '/images/Jack.jpg',
         text: 'I will tell you this at the meeting',
         time: '20:33 AM',
-        data: 'Aug. 25, 2021',
+        data: 'Aug. 04, 2022',
     },
 ]
 

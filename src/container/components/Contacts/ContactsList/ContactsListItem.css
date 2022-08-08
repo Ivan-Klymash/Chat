@@ -1,18 +1,21 @@
-.left-part{
+.left-part {
     border-right: 1px solid lightgray;
     width: 38%;
 }
+
 .chat-header {
     padding: 15px 10px;
     border-bottom: 1px solid lightgray;
     background-color: rgba(219, 219, 219, 0.4);
 }
+
 .contact-img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
 }
+
 .form-box {
     border: 1px solid lightgray;
     border-radius: 15px;
@@ -21,6 +24,7 @@
     align-items: center;
     margin-top: 20px;
 }
+
 .chat-search {
     border: none;
     outline: none;
@@ -29,11 +33,13 @@
     display: inline-block;
     font-size: 14px;
 }
+
 /* забрати з поля пошуку хрестик(очистити) */
-  input[type="search"]::-webkit-search-cancel-button {
+input[type="search"]::-webkit-search-cancel-button {
     display: none;
-  }
-  .chats-title {
+}
+
+.chats-title {
     padding: 30px 10px 40px;
     color: blue;
     font-size: 16px;
@@ -42,12 +48,13 @@
 }
 
 /* ContactsListItem */
-.container{
+.container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     height: auto;
 }
+
 .contact-item-btn {
     padding: 0 10px;
     width: 100%;
@@ -56,17 +63,20 @@
     cursor: pointer;
     background-color: white;
 }
+
 .contact-item {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 15px 0px;
 }
+
 .contact-item-name {
     padding-left: 15px;
     font-weight: 600;
     text-align: start;
 }
+
 .contact-item-data {
     font-size: 10px;
     flex-grow: 1;
@@ -88,19 +98,22 @@
     padding: 10px 10px 0px 10px;
     background-color: rgba(219, 219, 219, 0.4);
 }
+
 .active-message-icon {
     color: green;
     margin-left: -10px;
     margin-top: 30px;
 }
-.active-message{
+
+.active-message {
     position: absolute;
     height: 78%;
     overflow-y: scroll;
     background-color: floralwhite;
     width: 100%;
 }
-.form-box-message{
+
+.form-box-message {
     background-color: grey;
     margin-left: 10px;
     color: white;
@@ -108,6 +121,7 @@
     margin-top: 0px;
     font-size: 14px;
 }
+
 .send-message-area {
     width: 100%;
     background-color: rgba(219, 219, 219, 0.4);
@@ -116,6 +130,7 @@
     top: 89.5%;
     border-top: 1px solid lightgray;
 }
+
 .send-box {
     border: 1px solid lightgray;
     border-radius: 10px;
@@ -125,12 +140,14 @@
     background-color: white;
     width: 100%;
 }
+
 .send-message {
     border: none;
     outline: none;
     width: 100%;
     font-size: 14px;
 }
+
 .send-icons {
     background-image: url(../../../../assets/background-images/outline_send_black_18dp.png);
     background-repeat: no-repeat;
@@ -140,12 +157,14 @@
     background-color: inherit;
     margin-right: 4px;
     margin-top: 2px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 581px) {
-    .left-part{
+    .left-part {
         display: none;
     }
+
     .right-part {
         width: 100%;
         position: static;
