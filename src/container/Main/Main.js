@@ -10,6 +10,8 @@ import { Drawer, makeStyles, useTheme } from '@material-ui/core'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import Contacts from '../components/Contacts/ContactsList/Contacts/Contacts'
+// import { Route } from 'react-router-dom'
+// import AlicePage from '../../pages/AlicePage/AlicePage'
 
 const drawerWidth = '100%'
 
@@ -122,6 +124,7 @@ const Main = () => {
                 <Divider />
                 <Contacts />
             </Drawer>
+            {/* <Route path="/alice" component={AlicePage} /> */}
         </>
     )
 }

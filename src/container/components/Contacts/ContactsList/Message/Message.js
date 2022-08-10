@@ -84,6 +84,17 @@ const Message = () => {
                         </span>
                     </div>
                 ))}
+                <img
+                    id="josef-img"
+                    className="contact-img"
+                    src="/images/Josefina.jpg"
+                    style={{ display: 'none' }}
+                />
+                <p
+                    id="new-joke"
+                    className=" form-box form-box-message"
+                    style={{ display: 'none' }}
+                ></p>
             </div>
             <div className="send-message-area">
                 <form className="send-box" onSubmit={onSend}>
@@ -98,11 +109,28 @@ const Message = () => {
                         className="send-icons"
                         type="submit"
                         value="Send"
+                        onClick={showText}
                     ></button>
                 </form>
             </div>
         </>
     )
+}
+
+function showText() {
+    fetch('https://api.chucknorris.io/jokes/random')
+        .then((res) => res.json())
+        .then((data) => {
+            let text = document.getElementById('new-joke')
+            text.style.display = 'block'
+            let img = document.getElementById('josef-img')
+            img.style.display = 'block'
+            let message = data.value
+            text.textContent = message
+            document.append(img)
+            document.append(text)
+        })
+        .catch(() => console.log('error'))
 }
 
 export default Message
