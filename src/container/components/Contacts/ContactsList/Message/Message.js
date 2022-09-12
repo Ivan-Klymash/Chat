@@ -6,22 +6,22 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 const Message = () => {
     const arrMessage = [
         {
-            image: <img className="contact-img" src="/images/Josefina.jpg" />,
             text: 'Quickly come to the meeting room 1B, we have a big server issue',
-            data: '06/25/22',
-            time: '14:00 AM',
+            image: <img className="contact-img " src="/images/Josefina.jpg" />,
+            data: '2022-06-25',
+            time: '14:00',
         },
         {
             image: <img className="contact-img" src="/images/own-photo.jpg" />,
             text: "I'm having breakfast right now, cant you wait for 10 minutes?",
-            data: '06/25/22',
-            time: '14:05 AM',
+            data: '2022-06-25',
+            time: '14:05',
         },
         {
-            image: <img className="contact-img" src="/images/Josefina.jpg" />,
             text: 'We are losing money! Quick',
-            data: '06/25/22',
-            time: '14:06 AM',
+            image: <img className="contact-img " src="/images/Josefina.jpg" />,
+            data: '2022-06-25',
+            time: '14:06',
         },
     ]
 
@@ -44,11 +44,27 @@ const Message = () => {
             return [...value, newMessage]
         })
     }
+    // для запису відповіді із сервера
+    // const [answer, setAnswer] = useState({ text: '' })
+
+    // const serverTextChange = (e) => {
+    //     setAnswer((value) => ({
+    //         ...value,
+    //         text: e.target.value,
+    //     }))
+    // }
+
+    // const onSave = (e) => {
+    //     e.preventDefault(), setAnswer({ text: '' })
+    //     setMessage((value) => {
+    //         return [...value, answer]
+    //     })
+    // }
 
     return (
         <>
             <div className="active-message-user">
-                <img className="contact-img" src="/images/Josefina.jpg" />
+                <img className="contact-img " src="/images/Josefina.jpg" />
                 <FontAwesomeIcon
                     icon={faCheckCircle}
                     className="active-message-icon"
@@ -66,7 +82,10 @@ const Message = () => {
                         }}
                     >
                         <article
-                            style={{ display: 'flex', alignItems: 'center' }}
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                            }}
                         >
                             <div>{image}</div>
                             <p className="form-box form-box-message">{text}</p>
@@ -74,7 +93,7 @@ const Message = () => {
                         <span
                             style={{
                                 fontSize: 10,
-                                marginLeft: '13%',
+                                marginLeft: '12%',
                             }}
                         >
                             {data}
@@ -84,17 +103,37 @@ const Message = () => {
                         </span>
                     </div>
                 ))}
-                <img
-                    id="josef-img"
-                    className="contact-img"
-                    src="/images/Josefina.jpg"
-                    style={{ display: 'none' }}
-                />
-                <p
-                    id="new-joke"
-                    className=" form-box form-box-message"
-                    style={{ display: 'none' }}
-                ></p>
+                {/* відповідь із сервера */}
+                <div
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'end',
+                    }}
+                >
+                    <p
+                        id="new-joke"
+                        className=" form-box form-box-message"
+                        style={{
+                            display: 'none',
+                            marginLeft: '10px',
+                        }}
+                    ></p>
+                    <img
+                        id="josef-img"
+                        className="contact-img"
+                        src="/images/Josefina.jpg"
+                        style={{
+                            display: 'none',
+                            marginLeft: '10px',
+                            marginRight: '12px',
+                        }}
+                    />
+                </div>
+                <span
+                    id="anser_date"
+                    style={{ fontSize: '10px', marginLeft: '13%' }}
+                ></span>
             </div>
             <div className="send-message-area">
                 <form className="send-box" onSubmit={onSend}>
@@ -113,6 +152,17 @@ const Message = () => {
                     ></button>
                 </form>
             </div>
+            {/* форма для запису відповіді із сервера на сторінці */}
+            {/* <div>
+                <form onSubmit={onSave}>
+                    <input
+                        className="get-message"
+                        value={answer.text}
+                        onChange={serverTextChange}
+                        type="text"
+                    />
+                </form>
+            </div> */}
         </>
     )
 }
@@ -128,9 +178,11 @@ function showText() {
             let message = data.value
             text.textContent = message
             document.append(img)
-            document.append(text)
+            // document.append(text)
         })
         .catch(() => console.log('error'))
+    let anserDate = document.getElementById('anser_date')
+    anserDate.textContent = new Date().toISOString().slice(0, 16)
 }
 
 export default Message

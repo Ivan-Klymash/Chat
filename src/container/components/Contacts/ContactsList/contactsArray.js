@@ -1,7 +1,7 @@
 const contactsArray = [
     {
         id: 1,
-        name: 'Alice Freeman',
+        name: 'Alice',
         image: '/images/Alice Freeman.jpg',
         text: 'Your are the worst!',
         time: '15:35 AM',
@@ -17,7 +17,7 @@ const contactsArray = [
     },
     {
         id: 3,
-        name: 'Velazquez',
+        name: 'Tom',
         image: '/images/Velazquez.jpg',
         text: 'Quickly come to the meeting room 1B, we have a big server issue',
         time: '09:52 AM',
@@ -25,7 +25,7 @@ const contactsArray = [
     },
     {
         id: 4,
-        name: 'Barrera',
+        name: 'Ella',
         image: '/images/Barrera.jpg',
         text: 'Can you help me with this problem? ',
         time: '16:05 AM',

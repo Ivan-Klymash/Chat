@@ -1,6 +1,7 @@
 .left-part {
     border-right: 1px solid lightgray;
     width: 38%;
+    height: auto;
 }
 
 .chat-header {
@@ -15,6 +16,8 @@
     border-radius: 50%;
     cursor: pointer;
 }
+
+
 
 .form-box {
     border: 1px solid lightgray;
@@ -40,9 +43,10 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .chats-title {
-    padding: 30px 10px 40px;
+    padding: 30px 10px 14px;
     color: blue;
     font-size: 16px;
+    font-weight: bold;
     background-color: white;
     margin: 0;
 }
@@ -86,6 +90,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .right-part {
     width: 62%;
+    height: 100vh;
     position: relative;
     top: 0px;
     background-color: inherit;
@@ -124,10 +129,10 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .send-message-area {
     width: 100%;
-    background-color: rgba(219, 219, 219, 0.4);
-    padding: 30px 3% 0px;
+    background-color: rgba(219, 219, 219, 0.1);
+    padding: 0px 3% 0px;
     position: absolute;
-    top: 89.5%;
+    top: 92%;
     border-top: 1px solid lightgray;
 }
 

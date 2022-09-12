@@ -3,8 +3,19 @@ import React from 'react'
 import './ContactsListItem.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { Button } from '@material-ui/core'
 
-const ContactsListItem = ({ name, image, text, data }) => {
+import FavoriteIcon from '@material-ui/icons/Favorite'
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
+
+const ContactsListItem = ({
+    name,
+    image,
+    text,
+    data,
+    isLiked = false,
+    changeLike,
+}) => {
     return (
         <>
             <div className="container">
@@ -24,6 +35,22 @@ const ContactsListItem = ({ name, image, text, data }) => {
                             {name}
                             <div style={{ fontWeight: 100 }}>{text}</div>
                         </div>
+                        <Button
+                            variant="outlined"
+                            onClick={() => changeLike}
+                            style={{
+                                margin: '5px',
+                                width: '10px',
+                                height: '20px',
+                                minWidth: '40px',
+                            }}
+                        >
+                            {isLiked ? (
+                                <FavoriteIcon />
+                            ) : (
+                                <FavoriteBorderIcon />
+                            )}
+                        </Button>
                         <span className="contact-item-data">{data}</span>
                     </div>
                 </button>

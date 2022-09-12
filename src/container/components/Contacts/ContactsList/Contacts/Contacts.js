@@ -4,8 +4,10 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import ContactsListItem from '../ContactsListItem'
 import contactsArray from '../contactsArray'
+// import { Button } from '@material-ui/core'
+// import { Link } from 'react-router-dom'
 
-const Contacts = () => {
+const Contacts = ({ likeButtonState }, { changeLike }) => {
     return (
         <>
             <div className="chat-header">
@@ -17,7 +19,16 @@ const Contacts = () => {
                         marginLeft: '-10px',
                     }}
                 />
-
+                <span
+                    style={{
+                        position: 'absolute',
+                        left: '18%',
+                        top: '3%',
+                        fontSize: '16px',
+                    }}
+                >
+                    You
+                </span>
                 <form>
                     <div className="form-box">
                         <FontAwesomeIcon
@@ -41,6 +52,7 @@ const Contacts = () => {
                 </form>
             </div>
             <p className="chats-title">Chats</p>
+            <br />
             {contactsArray.map(({ id, name, image, text, time, data }) => (
                 <ContactsListItem
                     key={id}
@@ -49,8 +61,23 @@ const Contacts = () => {
                     text={text}
                     time={time}
                     data={data}
+                    isLiked={likeButtonState}
+                    changeLike={changeLike}
                 />
             ))}
+
+            {/* <Button>
+                <Link to="/ella">ellas page</Link>
+                <span>describe</span>
+            </Button>
+            <Button>
+                <Link to="/jack">jacks page</Link>
+                <span>describe</span>
+            </Button>
+            <Button>
+                <Link to="/john">johns page</Link>
+                <span>describe</span>
+            </Button> */}
         </>
     )
 }
