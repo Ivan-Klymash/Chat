@@ -44,22 +44,6 @@ const Message = () => {
             return [...value, newMessage]
         })
     }
-    // для запису відповіді із сервера
-    // const [answer, setAnswer] = useState({ text: '' })
-
-    // const serverTextChange = (e) => {
-    //     setAnswer((value) => ({
-    //         ...value,
-    //         text: e.target.value,
-    //     }))
-    // }
-
-    // const onSave = (e) => {
-    //     e.preventDefault(), setAnswer({ text: '' })
-    //     setMessage((value) => {
-    //         return [...value, answer]
-    //     })
-    // }
 
     return (
         <>
@@ -74,7 +58,7 @@ const Message = () => {
                 </h4>
             </div>
             <div className="active-message">
-                {message.map(({ image, text, data, time }, i) => (
+                {message.map(({ text }, i) => (
                     <div
                         key={i}
                         style={{
@@ -87,7 +71,12 @@ const Message = () => {
                                 alignItems: 'center',
                             }}
                         >
-                            <div>{image}</div>
+                            <div>
+                                <img
+                                    className="contact-img"
+                                    src="/images/own-photo.jpg"
+                                />
+                            </div>
                             <p className="form-box form-box-message">{text}</p>
                         </article>
                         <span
@@ -96,14 +85,11 @@ const Message = () => {
                                 marginLeft: '12%',
                             }}
                         >
-                            {data}
-                        </span>
-                        <span style={{ fontSize: 10, marginLeft: 10 }}>
-                            {time}
+                            {new Date().toString().slice(4, 21)}
                         </span>
                     </div>
                 ))}
-                {/* відповідь із сервера */}
+
                 <div
                     style={{
                         display: 'flex',
@@ -152,17 +138,6 @@ const Message = () => {
                     ></button>
                 </form>
             </div>
-            {/* форма для запису відповіді із сервера на сторінці */}
-            {/* <div>
-                <form onSubmit={onSave}>
-                    <input
-                        className="get-message"
-                        value={answer.text}
-                        onChange={serverTextChange}
-                        type="text"
-                    />
-                </form>
-            </div> */}
         </>
     )
 }
@@ -182,7 +157,8 @@ function showText() {
         })
         .catch(() => console.log('error'))
     let anserDate = document.getElementById('anser_date')
-    anserDate.textContent = new Date().toISOString().slice(0, 16)
+
+    anserDate.textContent = new Date().toString().slice(4, 21)
 }
 
 export default Message

@@ -4,8 +4,6 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import ContactsListItem from '../ContactsListItem'
 import contactsArray from '../contactsArray'
-// import { Button } from '@material-ui/core'
-// import { Link } from 'react-router-dom'
 
 const Contacts = ({ likeButtonState }, { changeLike }) => {
     return (
@@ -65,19 +63,6 @@ const Contacts = ({ likeButtonState }, { changeLike }) => {
                     changeLike={changeLike}
                 />
             ))}
-
-            {/* <Button>
-                <Link to="/ella">ellas page</Link>
-                <span>describe</span>
-            </Button>
-            <Button>
-                <Link to="/jack">jacks page</Link>
-                <span>describe</span>
-            </Button>
-            <Button>
-                <Link to="/john">johns page</Link>
-                <span>describe</span>
-            </Button> */}
         </>
     )
 }
